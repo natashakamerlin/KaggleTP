@@ -1,0 +1,14 @@
+Tabular Playground Series March 2021
+
+The aim is to predict a binary target based on a number of categorical (cat0-cat18) and continuous (cont0-cont10) features given in a 
+tabular dataset (train.csv). This notebook uses a neural network to predict the target.
+
+After loading and preprocessing (feature encoding) the data and using mutual information to select a subset of the data, a neural network is built 
+with 2 hidden layers and tuned using GridSearch to find the optimum number of hidden nodes and dropout rate. In addition to the dropout layer, a 
+batch normalization layer is added. For the hidden layers, the activation function is set to ReLU and the optimization algorithm to Adam. 
+The output layer instead uses a Sigmoid activation function and binary cross-entropy loss function, since this is a binary classification 
+problem. 
+
+The final accuracy for the validation set is 0.846794 and the area under the ROC curve between the predicted probability and 
+the observed target is 0.882547.
+
